@@ -252,6 +252,6 @@ python build_project_demo_video.py
 - 尚未系统比较多个checkpoint和随机种子；
 - 尚未通过遮挡/黑图实验验证视觉输入贡献；
 - 当前结果只适用于MuJoCo仿真，未进行sim-to-real部署；
-- 旧交互模式的编排仍集中在 `application.py`；新增算法必须进入对应领域模块，后续按键盘遥操作、手部状态机和诊断模式逐项迁移。
+
 
 
