@@ -1,0 +1,53 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+
+# Trained policies and checkpoints (publish separately with checksums)
+models/
+checkpoints/
+*.safetensors
+
+# Demonstrations and converted datasets
+demonstrations_npz/
+lerobot_dataset/
+*.tar.gz
+
+# Raw evaluation runs; compact final reports live in project_results/
+act_fixed_position_eval/
+act_repeated_position_eval/
+act_position_jitter_eval/
+act_demo_comparison/
+*.diagnostics.csv
+*.log
+
+# Generated media and debug renders
+*.mp4
+*.gif
+*.png
+!g1_white_cup_act_demo.mp4
+!act_window_comparison.mp4
+
+# MuJoCo debug dumps
+MJMODEL.TXT
+MJDATA.TXT
+
+# Superseded local exploration utilities; retained locally for reference
+inspect_g1_grasp_pose.py
+replay_g1_cup.py
+replay_g1_state.py
+track_g1_arm.py
+track_g1_arm_hand.py
+readme
+
+# Upstream repositories are tracked separately at pinned commits
+unitree_ros/
+unitree_mujoco/
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+*~

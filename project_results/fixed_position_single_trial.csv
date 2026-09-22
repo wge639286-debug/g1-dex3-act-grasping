@@ -1,0 +1,11 @@
+position_index,cup_x_m,cup_y_m,success,success_time_s,final_cup_rise_mm,max_lowest_clearance_mm,source
+0,0.36,-0.075,True,13.84,24.741588982348684,23.925650554049938,act_fixed_position_eval/position_00.diagnostics.csv
+1,0.34,-0.075,True,10.64,26.989778209487447,26.179314982204495,act_fixed_position_eval/position_01.diagnostics.csv
+2,0.34,-0.05,True,12.4,19.208302728860872,18.52377826167806,act_fixed_position_eval/position_02.diagnostics.csv
+3,0.34,-0.025,True,15.0,26.43800790525308,26.231911054205526,act_fixed_position_eval/position_03.diagnostics.csv
+4,0.37,-0.075,True,12.36,17.523969957814913,16.443836686006684,act_fixed_position_eval/position_04.diagnostics.csv
+5,0.37,-0.05,True,14.56,23.863929698396902,23.19653577362779,act_fixed_position_eval/position_05.diagnostics.csv
+6,0.37,-0.025,True,17.96,27.03952828175038,26.767794847777914,act_position_370_-025.diagnostics.csv
+7,0.4,-0.075,True,15.96,22.073046892316263,21.15198184227085,act_position_400_-075.diagnostics.csv
+8,0.4,-0.05,True,26.76,19.141051768730264,18.82340727248355,act_position_400_-050_30s.diagnostics.csv
+9,0.4,-0.025,True,16.88,22.298954658959147,22.180642179421504,act_position_400_-025_30s.diagnostics.csv

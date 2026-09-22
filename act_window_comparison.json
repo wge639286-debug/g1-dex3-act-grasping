@@ -1,0 +1,26 @@
+{
+  "5": {
+    "source_csv": "act_rollout_030000_diagnostic.diagnostics.csv",
+    "duration_s": 20.0,
+    "max_index_middle_target_rad": 0.015321239829063416,
+    "max_index_middle_actual_rad": 0.014991533011198044,
+    "first_mean_flexion_0_1_rad_s": null,
+    "max_lowest_point_clearance_mm": 0.00020426756219826814,
+    "final_lowest_point_clearance_mm": -0.004581472876519221,
+    "final_table_contacts": 3,
+    "max_continuous_10mm_clear_hold_s_at_sample_times": 0.0,
+    "three_finger_loaded_fraction_over_0_1N": 0.0
+  },
+  "25": {
+    "source_csv": "act_rollout_030000_window25.diagnostics.csv",
+    "duration_s": 14.04,
+    "max_index_middle_target_rad": 0.5446511507034302,
+    "max_index_middle_actual_rad": 0.5437700748443604,
+    "first_mean_flexion_0_1_rad_s": 8.8,
+    "max_lowest_point_clearance_mm": 23.884322123606026,
+    "final_lowest_point_clearance_mm": 23.884322123606026,
+    "final_table_contacts": 0,
+    "max_continuous_10mm_clear_hold_s_at_sample_times": 1.005599999999922,
+    "three_finger_loaded_fraction_over_0_1N": 0.2336182336182336
+  }
+}

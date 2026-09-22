@@ -1,0 +1,10 @@
+# Direct runtime dependencies verified in the local lerobot environment.
+# Install PyTorch separately for the target CPU/CUDA platform, then install
+# LeRobot from the pinned source revision documented in ENVIRONMENT.md.
+mujoco==3.8.1
+numpy==2.2.6
+av==15.1.0
+opencv-python-headless==4.13.0.92
+Pillow==12.3.0
+pyarrow==25.0.1
+safetensors==0.8.0
