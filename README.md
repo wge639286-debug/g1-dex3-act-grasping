@@ -6,7 +6,7 @@
 
 本项目在 MuJoCo 中搭建 Unitree G1 右臂、Dex3 灵巧手、桌面白杯和头部相机，完成从键盘遥操作、示范采集、LeRobot 数据转换、ACT 训练到闭环策略评估的完整流程。
 
-当前定位是一个**可复现的仿真模仿学习工程基线**。它已经证明策略能在多个固定杯子位置完成三指包络抓取和抬升；重复试验与扰动鲁棒性评估仍在进行，因此不把单次 `10/10` 描述为统计意义上的100%成功率。
+当前定位是一个**可复现的仿真模仿学习工程基线**。它已经证明策略能在多个固定杯子位置完成三指包络抓取和抬升；
 
 ## 系统流程
 
@@ -243,7 +243,7 @@ python build_project_demo_video.py
 | `evaluate_act_fixed_positions.py` | 保留原命令的固定位置评测入口 |
 | `evaluate_act_repeated_positions.py` | 保留原命令的重复与扰动评测入口 |
 | `summarize_single_trial_results.py` | 合并已有十位置单次结果 |
-| `build_project_demo_video.py` | 生成简历项目展示视频 |
+| `build_project_demo_video.py` | 生成展示视频 |
 
 ## 已知限制
 
