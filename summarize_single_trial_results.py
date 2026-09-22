@@ -6,7 +6,7 @@ from __future__ import annotations
 import csv
 from pathlib import Path
 
-from evaluate_act_fixed_positions import read_diagnostics
+from g1_dex3_act_grasping.evaluation.fixed_positions import read_diagnostics
 
 
 PROJECT_DIR = Path(__file__).resolve().parent

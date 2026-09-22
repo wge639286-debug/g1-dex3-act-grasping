@@ -2,6 +2,8 @@
 
 [MIT License](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.md)
 
+[架构说明](ARCHITECTURE.md)记录模块边界，并规定新功能不得继续堆入兼容入口脚本。
+
 本项目在 MuJoCo 中搭建 Unitree G1 右臂、Dex3 灵巧手、桌面白杯和头部相机，完成从键盘遥操作、示范采集、LeRobot 数据转换、ACT 训练到闭环策略评估的完整流程。
 
 当前定位是一个**可复现的仿真模仿学习工程基线**。它已经证明策略能在多个固定杯子位置完成三指包络抓取和抬升；重复试验与扰动鲁棒性评估仍在进行，因此不把单次 `10/10` 描述为统计意义上的100%成功率。
@@ -230,12 +232,16 @@ python build_project_demo_video.py
 
 | 文件 | 用途 |
 |---|---|
-| `g1_cup_minimal.py` | 场景、IK、遥操作、录制、回放和ACT闭环推理 |
-| `convert_npz_to_lerobot.py` | NPZ/MP4转LeRobot数据集 |
-| `act_inference_smoke_test.py` | 本地checkpoint加载与单帧推理检查 |
-| `act_compare_demonstrations.py` | ACT预测动作块与示范阶段对比 |
-| `evaluate_act_fixed_positions.py` | 固定位置单次基准 |
-| `evaluate_act_repeated_positions.py` | 重复试验、断点续跑与自动汇总 |
+| `g1_cup_minimal.py` | 兼容入口；调用包内应用编排代码 |
+| `g1_dex3_act_grasping/envs/` | MuJoCo场景构建 |
+| `g1_dex3_act_grasping/control/` | 机械臂IK与Dex3接触诊断 |
+| `g1_dex3_act_grasping/data/` | 录制、回放与LeRobot转换 |
+| `g1_dex3_act_grasping/policies/` | ACT加载、推理与闭环执行 |
+| `g1_dex3_act_grasping/evaluation/` | 成功判据、固定位置和扰动评测 |
+| `convert_npz_to_lerobot.py` | 保留原命令的数据转换入口 |
+| `act_inference_smoke_test.py` | 保留原命令的ACT冒烟测试入口 |
+| `evaluate_act_fixed_positions.py` | 保留原命令的固定位置评测入口 |
+| `evaluate_act_repeated_positions.py` | 保留原命令的重复与扰动评测入口 |
 | `summarize_single_trial_results.py` | 合并已有十位置单次结果 |
 | `build_project_demo_video.py` | 生成简历项目展示视频 |
 
@@ -246,6 +252,6 @@ python build_project_demo_video.py
 - 尚未系统比较多个checkpoint和随机种子；
 - 尚未通过遮挡/黑图实验验证视觉输入贡献；
 - 当前结果只适用于MuJoCo仿真，未进行sim-to-real部署；
-- 主脚本功能较集中，后续可按环境、控制、数据、策略和评估继续拆分。
+- 旧交互模式的编排仍集中在 `application.py`；新增算法必须进入对应领域模块，后续按键盘遥操作、手部状态机和诊断模式逐项迁移。
 
 
